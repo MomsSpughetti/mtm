@@ -17,7 +17,7 @@ int valid(int s){
      scanf("%d",&size_of_input);
 
      if(!valid(size_of_input)){
-         printf("Invalid size");
+         printf("Invalid size\n");
          return 0;
      }
 
