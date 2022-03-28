@@ -28,7 +28,7 @@ int valid(int s){
               
           if(scanf("%d", &numbers[i]) != 1)
           {
-            printf("Invalid number");
+            printf("Invalid number\n");
             return 0; 
           }
         }
