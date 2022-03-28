@@ -45,10 +45,7 @@ int valid(int s){
             sum += log_2;
             printf("The number %d is a power of 2: %d = 2^%d\n", numbers[i], numbers[i], log_2_int);
         }
-        printf("Total exponent sum is %d", sum);
      }
+      printf("Total exponent sum is %d\n", sum);
      
-
-
-
 }
