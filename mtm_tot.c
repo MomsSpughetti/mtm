@@ -37,7 +37,7 @@ int valid(int s){
         int sum = 0;
      for (int i = 0; i < size_of_input; i++)
      {
-       if(numbers[i] < 0)
+       if(numbers[i] <= 0)
        continue;
         log_2 = log2(numbers[i]);
         log_2_int = (int)log_2;
