@@ -34,16 +34,18 @@ int valid(int s){
         }
         double log_2;
         int log_2_int;
-
+        int sum = 0;
      for (int i = 0; i < size_of_input; i++)
      {
        if(numbers[i] < 0)
        continue;
         log_2 = log2(numbers[i]);
         log_2_int = (int)log_2;
-
-        if(log_2 == log_2_int )
-        printf("The number %d is a power of 2: %d = 2^%d\n", numbers[i], numbers[i], log_2_int);
+        if(log_2 == log_2_int ){
+            sum += log_2;
+            printf("The number %d is a power of 2: %d = 2^%d\n", numbers[i], numbers[i], log_2_int);
+        }
+        printf("Total exponent sum is %d", sum);
      }
      
 
