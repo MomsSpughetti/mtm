@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-#define NUM 100
 
 
-int is_number(int n){
-    
+double log2(double num){
+    if(num <= 1)
+      return num-1;
+    return log2(num / 2) + 1;
 }
+
 int valid(int s){
     return (s <= 0)? 0 : 1;
 }
@@ -36,10 +37,12 @@ int valid(int s){
 
      for (int i = 0; i < size_of_input; i++)
      {
+       if(numbers[i] < 0)
+       continue;
         log_2 = log2(numbers[i]);
         log_2_int = (int)log_2;
 
-        if(log_2 == log_2_int)
+        if(log_2 == log_2_int )
         printf("The number %d is a power of 2: %d = 2^%d\n", numbers[i], numbers[i], log_2_int);
      }
      
