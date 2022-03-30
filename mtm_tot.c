@@ -22,6 +22,8 @@ int valid(int s){
      }
 
      int *numbers = (int*)malloc(size_of_input * sizeof(int));
+     if(numbers == NULL)
+     exit(1);
      printf("Enter numbers:\n");
      for (int i = 0; i < size_of_input; i++)
         {
@@ -37,7 +39,7 @@ int valid(int s){
         int sum = 0;
      for (int i = 0; i < size_of_input; i++)
      {
-       if(numbers[i] < 0)
+       if(numbers[i] <= 0)
        continue;
         log_2 = log2(numbers[i]);
         log_2_int = (int)log_2;
@@ -46,6 +48,7 @@ int valid(int s){
             printf("The number %d is a power of 2: %d = 2^%d\n", numbers[i], numbers[i], log_2_int);
         }
      }
-      printf("Total exponent sum is %d\n", sum);
+     free(numbers);
+     printf("Total exponent sum is %d\n", sum);
      
 }
