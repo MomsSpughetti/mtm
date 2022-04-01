@@ -39,8 +39,8 @@ void swap(char** a, char** b) {
 }
 
 char* getLongestString(char** strings, int size) {
-	char* max = *strings;
-	for (int i = 0; i < size; i++) {
+	char* max = strings[0];
+	for (int i = 1; i < size; i++) {
 		if (strlen(max) < strlen(strings[i])) {
 			max = strings[i];
 		}
@@ -69,10 +69,12 @@ int readSize() {
 }
 
 void printResults(char** words, int size) {
+	if(size<=0)
+	return;
 	char* longest = getLongestString(words, size);
 	printf("The longest word is: %s\n", longest);
 	sortStrings(words, size);
-	printf("The maximal word lexicographically is: %s\n", words[size - 1]);
+	printf("The maximal word lexicographically is: %s\n", words[size-1]);
 	printf("The minimal word lexicographically is: %s\n", words[0]);
 }
 
