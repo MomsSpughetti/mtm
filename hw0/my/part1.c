@@ -23,7 +23,7 @@ int valid(int s){
 
      int *numbers = (int*)malloc(size_of_input * sizeof(int));
      if(numbers == NULL)
-     exit(1);
+    return;
      printf("Enter numbers:\n");
      for (int i = 0; i < size_of_input; i++)
         {
