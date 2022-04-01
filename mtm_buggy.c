@@ -69,6 +69,8 @@ int readSize() {
 }
 
 void printResults(char** words, int size) {
+        if(size <= 0)
+        return;
 	char* longest = getLongestString(words, size);
 	printf("The longest word is: %s\n", longest);
 	sortStrings(words, size);
