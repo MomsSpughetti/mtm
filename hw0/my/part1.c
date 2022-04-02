@@ -21,15 +21,17 @@ int valid(int s){
          return 0;
      }
 
-     int *numbers = (int*)malloc(size_of_input * sizeof(int));
+     int *numbers = (int *)malloc(size_of_input * sizeof(int));
      if(numbers == NULL)
-    return 0;
+        return 0;
+    
      printf("Enter numbers:\n");
      for (int i = 0; i < size_of_input; i++)
         {
               
           if(scanf("%d", &numbers[i]) != 1)
           {
+            free(numbers);
             printf("Invalid number\n");
             return 0; 
           }
@@ -52,3 +54,4 @@ int valid(int s){
      printf("Total exponent sum is %d\n", sum);
      
 }
+
